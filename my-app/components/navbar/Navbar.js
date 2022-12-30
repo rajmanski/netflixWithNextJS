@@ -11,7 +11,6 @@ export const Navbar = (props) => {
                         Netflix
                     </div>
                 </a>
-            </div>
             <ul className={styles.navItems}>
                 <li className={styles.navItem}>Home</li>
                 <li className={styles.navItem2}>My List</li>
@@ -31,6 +30,7 @@ export const Navbar = (props) => {
                     </div>
                 </div>
             </nav>
+            </div>
         </div>
     )
 }
