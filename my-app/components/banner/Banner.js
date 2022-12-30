@@ -37,7 +37,7 @@ export const Banner = (props) => {
         style={{
           backgroundImage: `url(${imgUrl})`,
           width: "100%",
-          height: "500px",
+          height: "80%",
           backgroundSize: "cover",
           backgroundPosition: "50% 50%",
         }}
