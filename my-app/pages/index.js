@@ -18,7 +18,7 @@ export default function Home() {
       <h1>Netflix</h1>
 
       {/* <Navbar /> */}
-      <Banner/>
+      <Banner title="Forrest Gump" subTitle='A history of Forrest Gump' imgUrl='https://1.bp.blogspot.com/-yb-5UYWGn-s/YOgZx-2KtJI/AAAAAAAEJag/xwdbzJDViikSLkeaA9W3vM_ZhXGuQxy1gCLcBGAsYHQ/s2048/tom-hanks-in-forrest-gump-1.jpeg'/>
 
       {/* <Card /> */}
     </>
