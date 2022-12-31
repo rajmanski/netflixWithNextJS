@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./Banner.module.css";
 
 
+
 export const Banner = (props) => {
   const { title, subTitle, imgUrl } = props;
 
@@ -37,7 +38,7 @@ export const Banner = (props) => {
         style={{
           backgroundImage: `url(${imgUrl})`,
           width: "100%",
-          height: "80%",
+          height: "600px",
           backgroundSize: "cover",
           backgroundPosition: "50% 50%",
         }}

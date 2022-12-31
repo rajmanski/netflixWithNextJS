@@ -20,7 +20,7 @@ export default function Home() {
       <Banner
         title="Forrest Gump"
         subTitle="A history of Forrest Gump"
-        imgUrl="https://1.bp.blogspot.com/-yb-5UYWGn-s/YOgZx-2KtJI/AAAAAAAEJag/xwdbzJDViikSLkeaA9W3vM_ZhXGuQxy1gCLcBGAsYHQ/s2048/tom-hanks-in-forrest-gump-1.jpeg"
+        imgUrl="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/09/Forrest-Gump-Tom-Hanks.jpg"
       />
 
       {/* <Card /> */}
