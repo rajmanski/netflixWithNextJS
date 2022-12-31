@@ -2,6 +2,7 @@ import styles from "./Navbar.module.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export const Navbar = (props) => {
   const { username } = props;
@@ -40,6 +41,9 @@ export const Navbar = (props) => {
           <div>
             <button className={styles.usernameBtn}>
               <p className={styles.username} onClick={handleShowDropdown}>{username}</p>
+              <Image src={'/static/arrow.svg'} alt="Dropdown Icon"
+                width="24"
+                height="24" />
             </button>
             {showDropdown && (
               <div className={styles.navDropdown}>
