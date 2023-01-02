@@ -25,8 +25,10 @@ export default function Home() {
         subTitle="A history of Forrest Gump"
         imgUrl="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/09/Forrest-Gump-Tom-Hanks.jpg"
       />
-
-      <SectionCard title={'Hollywood'}/>
+      <div className={styles.sectionWrapper}>
+        <SectionCard title={'Hollywood'}/>
+      </div>
+      
 
     </>
   );
