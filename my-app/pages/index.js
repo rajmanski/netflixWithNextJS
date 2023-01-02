@@ -4,15 +4,20 @@ import styles from "../styles/Home.module.css";
 import { Banner } from "../components/banner/Banner";
 import { Navbar } from "../components/navbar/Navbar";
 import { SectionCard } from "../components/card/SectionCard";
-
 import { getVideos } from "../lib/videos";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
 
-  const HollywoodVideos = getVideos();
+export async function getServerSideProps(context) {
+  const HollywoodVideos =  getVideos();
+  return {
+    props: { HollywoodVideos }
+  }
+}
+
+export default function Home({HollywoodVideos}) {
+
 
   return (
     <>
