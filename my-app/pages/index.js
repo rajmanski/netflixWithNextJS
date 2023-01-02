@@ -1,28 +1,18 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { Banner } from "../components/banner/Banner";
 import { Navbar } from "../components/navbar/Navbar";
 import { SectionCard } from "../components/card/SectionCard";
 
+import { getVideos } from "../lib/videos";
+
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
 
-  const HollywoodVideos = [
-    {
-      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
-    },
-    {
-      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
-    },
-    {
-      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
-    },
-    {
-      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
-    },
-  ]
+  const HollywoodVideos = getVideos();
 
   return (
     <>
