@@ -24,9 +24,9 @@ export default function Home() {
         imgUrl="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/09/Forrest-Gump-Tom-Hanks.jpg"
       />
 
-      <Card imgUrl='/static/tom-hanks-in-forrest-gump-1/jpeg' size="large"/>
-      <Card imgUrl='/public/tom-hanks-in-forrest-gump-1.jpeg' size="medium"/>
-      <Card imgUrl='/public/tom-hanks-in-forrest-gump-1.jpeg' size="small"/>
+      <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
+      <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="medium"/>
+      <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="small"/>
     </>
   );
 }
