@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export async function getServerSideProps(context) {
-  const HollywoodVideos =  getVideos();
+  const HollywoodVideos =  await getVideos();
   return {
     props: { HollywoodVideos }
   }
