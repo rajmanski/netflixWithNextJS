@@ -14,7 +14,7 @@ export const Card = (props) => {
     }
 
     const handleOnError = () => {
-        setImgSrc('/static/tom-hanks-in-forrest-gump-1.jpeg');
+        setImgSrc('/static/No_Cover.jpg');
     }
 
     return (
