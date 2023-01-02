@@ -3,22 +3,17 @@ import styles from './SectionCard.module.css';
 
 export const SectionCard = (props) => {
 
-    const {title} = props;
+    const {title, videos, size} = props;
+    console.log({videos});
 
     return (
         <section className={styles.container}>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.cardWrapper}>
-                <Card id= {0} imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-                <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
+                {videos.map((video, id) => (
+                    <Card id={id} imgUrl={video.imgUrl} size={size}/>
+                ))}
+                
             </div>
         </section>
     )

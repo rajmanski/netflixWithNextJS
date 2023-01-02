@@ -4,13 +4,26 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import { Banner } from "../components/banner/Banner";
 import { Navbar } from "../components/navbar/Navbar";
-import { Card } from "../components/card/Card";
 import { SectionCard } from "../components/card/SectionCard";
 
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
+
+  const HollywoodVideos = [
+    {
+      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
+    },
+    {
+      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
+    },
+    {
+      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
+    },
+    {
+      imgUrl: '/static/tom-hanks-in-forrest-gump-1.jpeg'
+    },
+  ]
+
   return (
     <>
       <Head>
@@ -26,7 +39,8 @@ export default function Home() {
         imgUrl="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/09/Forrest-Gump-Tom-Hanks.jpg"
       />
       <div className={styles.sectionWrapper}>
-        <SectionCard title={'Hollywood'}/>
+        <SectionCard title={'Hollywood'} videos={HollywoodVideos} size='large'/>
+        <SectionCard title={'Disney'} videos={HollywoodVideos} size='medium'/>
       </div>
       
 
