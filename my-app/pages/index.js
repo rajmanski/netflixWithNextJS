@@ -28,9 +28,6 @@ export default function Home() {
 
       <SectionCard title={'Hollywood'}/>
 
-      <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
-      <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="medium"/>
-      <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="small"/>
     </>
   );
 }
