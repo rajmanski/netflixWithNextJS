@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import { Banner } from "../components/banner/Banner";
 import { Navbar } from "../components/navbar/Navbar";
 import { Card } from "../components/card/Card";
+import { SectionCard } from "../components/card/SectionCard";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +25,8 @@ export default function Home() {
         subTitle="A history of Forrest Gump"
         imgUrl="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/09/Forrest-Gump-Tom-Hanks.jpg"
       />
+
+      <SectionCard title={'Hollywood'}/>
 
       <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="large"/>
       <Card imgUrl='/static/tom-hanks-in-forrest-gump-1.jpeg' size="medium"/>
