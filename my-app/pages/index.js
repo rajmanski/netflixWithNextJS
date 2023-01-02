@@ -10,13 +10,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export async function getServerSideProps(context) {
-  const HollywoodVideos =  await getVideos();
+  const HollywoodVideos =  await getVideos('hollywood%20movies');
+  const disneyVideos =  await getVideos('disney%20trailers');
+  const travelVideos =  await getVideos('travel%20videos');
+  const kidsVideos =  await getVideos('kids%20movies%20trailers');
   return {
-    props: { HollywoodVideos }
+    props: { HollywoodVideos, disneyVideos, travelVideos,kidsVideos }
   }
 }
 
-export default function Home({HollywoodVideos}) {
+export default function Home({HollywoodVideos, disneyVideos, travelVideos, kidsVideos}) {
 
 
   return (
@@ -35,7 +38,9 @@ export default function Home({HollywoodVideos}) {
       />
       <div className={styles.sectionWrapper}>
         <SectionCard title={'Hollywood'} videos={HollywoodVideos} size='large'/>
-        <SectionCard title={'Disney'} videos={HollywoodVideos} size='medium'/>
+        <SectionCard title={'Disney'} videos={disneyVideos} size='small'/>
+        <SectionCard title={'Travel'} videos={travelVideos} size='medium'/>
+        <SectionCard title={'For Kids'} videos={kidsVideos} size='small'/>
       </div>
       
 
