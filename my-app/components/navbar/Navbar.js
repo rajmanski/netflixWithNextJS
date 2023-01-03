@@ -21,14 +21,19 @@ export const Navbar = (props) => {
 
   const handleShowDropdown = () => {
     showDropdown ? setShowDropdown(false) : setShowDropdown(true);
-  }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <a className={styles.logoLink} href="/">
-          <div className={styles.logoWrapper}><Image src={'/static/netflix.svg'} alt="Netflix logo"
-                width="111"
-                height="30" /></div>
+          <div className={styles.logoWrapper}>
+            <Image
+              src={"/static/netflix.svg"}
+              alt="Netflix logo"
+              width="128"
+              height="34"
+            />
+          </div>
         </a>
         <ul className={styles.navItems}>
           <li className={styles.navItem} onClick={handleOnClickHome}>
@@ -42,10 +47,15 @@ export const Navbar = (props) => {
         <nav className={styles.navContaier}>
           <div>
             <button className={styles.usernameBtn}>
-              <p className={styles.username} onClick={handleShowDropdown}>{username}</p>
-              <Image src={'/static/arrow.svg'} alt="Dropdown Icon"
+              <p className={styles.username} onClick={handleShowDropdown}>
+                {username}
+              </p>
+              <Image
+                src={"/static/arrow.svg"}
+                alt="Dropdown Icon"
                 width="24"
-                height="24" />
+                height="24"
+              />
             </button>
             {showDropdown && (
               <div className={styles.navDropdown}>
