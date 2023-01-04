@@ -1,9 +1,11 @@
 import '../styles/globals.css'
 import {magic} from '../lib/magic';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }) {
+
+  const [loading, isLoading] = useState(true);
 
   const router = useRouter();
 
@@ -11,12 +13,14 @@ export default function App({ Component, pageProps }) {
     const checkIsLogged = async () => {
       const isLoggedIn = await magic.user.isLoggedIn();
       if (isLoggedIn) {
+        isLoading(false);
         router.push('/');
       } else {
+        isLoading(false);
         router.push('/login');
       }
     }
     checkIsLogged();
   }, [])
-  return <Component {...pageProps} />
+  return loading ? <div>Loading...</div> : < Component {...pageProps} /> 
 }
