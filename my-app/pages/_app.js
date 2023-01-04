@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import {magic} from '../lib/magic';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { Oval } from 'react-loader-spinner'
 
 export default function App({ Component, pageProps }) {
 
@@ -10,17 +11,17 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const checkIsLogged = async () => {
-      const isLoggedIn = await magic.user.isLoggedIn();
-      if (isLoggedIn) {
-        isLoading(false);
-        router.push('/');
-      } else {
-        isLoading(false);
-        router.push('/login');
-      }
-    }
-    checkIsLogged();
+    // const checkIsLogged = async () => {
+    //   const isLoggedIn = await magic.user.isLoggedIn();
+    //   if (isLoggedIn) {
+    //     isLoading(false);
+    //     router.push('/');
+    //   } else {
+    //     isLoading(false);
+    //     router.push('/login');
+    //   }
+    // }
+    // checkIsLogged();
   }, [])
-  return loading ? <div>Loading...</div> : < Component {...pageProps} /> 
+  return < Component {...pageProps} /> 
 }
