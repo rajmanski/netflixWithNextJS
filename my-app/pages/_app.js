@@ -3,6 +3,7 @@ import {magic} from '../lib/magic';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
+
 export default function App({ Component, pageProps }) {
 
   const [loading, isLoading] = useState(true);
