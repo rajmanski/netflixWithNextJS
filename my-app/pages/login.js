@@ -21,10 +21,12 @@ const Login = () => {
       if (email === "prajmanski10@gmail.com") {
         setMsgForUser(null);
         console.log("You are logged as: ", email);
-        // router.push('/');
+        
         try {
           const token = await magic.auth.loginWithMagicLink({ email: email });
-          console.log(token);
+          if (token) {
+            router.push('/');
+          }
         } catch(error) {
           console.log('Error happened: ', error);
         }
