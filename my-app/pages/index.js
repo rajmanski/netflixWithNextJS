@@ -25,6 +25,9 @@ export default function Home({
   travelVideos,
   kidsVideos,
 }) {
+
+
+
   return (
     <>
       <Head>
@@ -34,7 +37,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <Navbar username="piotrek@test.pl" />
+        <Navbar />
         <Banner
           title="Forrest Gump"
           subTitle="A history of Forrest Gump"
