@@ -5,8 +5,10 @@ import { Banner } from "../components/banner/Banner";
 import { Navbar } from "../components/navbar/Navbar";
 import { SectionCard } from "../components/card/SectionCard";
 import { getVideos } from "../lib/videos";
+import magic from '../lib/magic';
 
 const inter = Inter({ subsets: ["latin"] });
+console.log(magic);
 
 export async function getServerSideProps(context) {
   const HollywoodVideos = await getVideos("hollywood%20movies");
