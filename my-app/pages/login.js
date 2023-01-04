@@ -8,6 +8,7 @@ import { magic } from "../lib/magic";
 const Login = () => {
   const [msgForUser, setMsgForUser] = useState(null);
   const [email, setEmail] = useState(null);
+  const [loading ,setLoading] = useState(false);
 
   const router = useRouter();
 
@@ -21,7 +22,7 @@ const Login = () => {
       if (email === "prajmanski10@gmail.com") {
         setMsgForUser(null);
         console.log("You are logged as: ", email);
-        
+        setLoading(true);
         try {
           const token = await magic.auth.loginWithMagicLink({ email: email });
           if (token) {
@@ -76,7 +77,7 @@ const Login = () => {
               onChange={getEmail}
             />
             <button className={styles.loginBtn} onClick={handleOnClick}>
-              Get started
+              {loading ? 'Loading...' : 'Get started'}
             </button>
           </div>
         </div>

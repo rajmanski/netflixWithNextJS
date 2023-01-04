@@ -9,7 +9,6 @@ import { getVideos } from "../lib/videos";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
 export async function getServerSideProps(context) {
   const HollywoodVideos = await getVideos("hollywood%20movies");
   const disneyVideos = await getVideos("disney%20trailers");
