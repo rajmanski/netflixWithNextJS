@@ -21,7 +21,6 @@ const router = useRouter();
         if (email === 'prajmanski10@gmail.com') {
             setMsgForUser(null);
             console.log('You are logged as: ', email);
-            console.log('Redirect to dashboard');
             router.push('/');
         }
     }
