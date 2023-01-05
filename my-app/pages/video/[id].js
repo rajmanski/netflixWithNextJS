@@ -8,13 +8,14 @@ const Video = () => {
   const router = useRouter();
 
   return (
-    <div>
+    <div className={styles.container}>
       Video {router.query.id}
       <Modal
         isOpen={true}
         contentLabel="Watch the video"
         onRequestClose={() => router.back()}
         overlayClassName={styles.overlay}
+        className={styles.modal}
       >
         <div>Modal body</div>
       </Modal>
