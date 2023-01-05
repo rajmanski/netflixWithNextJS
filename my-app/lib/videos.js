@@ -57,7 +57,7 @@ export const getCommonVideos = async (url) => {
   }
 };
 
-export const getVideoById = async (id) => {
+export const getVideoById =  (id) => {
   const URL = `videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}`;
 
   return getCommonVideos(URL);

@@ -16,12 +16,12 @@ export async function getStaticProps() {
   // }
 
   const videoId = 'bLvqoHBptjg';
-  const video = await getVideoById(videoId);
+  const videoArray = await getVideoById(videoId);
 
 
   return {
     props: {
-      video
+      video: videoArray.length > 0 ? videoArray[0] : {},
     },
     revalidate: 10,
   }
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
 
 const Video = ({video}) => {
   const router = useRouter();
-  const {title, publishTime, description, channelTitle, viewCount} = video;
+  const {title, publishTime, description, channelTitle, statistics: {viewCount}} = video;
 
   return (
     <div className={styles.container}>
