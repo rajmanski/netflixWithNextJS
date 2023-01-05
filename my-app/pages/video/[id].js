@@ -2,17 +2,23 @@ import { useRouter } from "next/router";
 import Modal from "react-modal";
 import styles from '../../styles/Video.module.css'
 import clsx from "classnames";
+import { getVideoById } from "../../lib/videos";
 
 Modal.setAppElement("#__next");
 
 export async function getStaticProps() {
-  const video = {
-    title: 'Title',
-    publishTime: '2023-01-01',
-    description: 'A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.',
-    channelTitle: 'Channel name',
-    viewCount: 10000,
-  }
+  // const video = {
+  //   title: 'Title',
+  //   publishTime: '2023-01-01',
+  //   description: 'A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.A history of something something.',
+  //   channelTitle: 'Channel name',
+  //   viewCount: 10000,
+  // }
+
+  const videoId = 'bLvqoHBptjg';
+  const video = await getVideoById(videoId);
+
+
   return {
     props: {
       video
