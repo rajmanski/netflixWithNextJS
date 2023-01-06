@@ -42,6 +42,7 @@ export async function getStaticPaths() {
 const Video = ({video}) => {
   const router = useRouter();
   const {title, publishTime, description, channelTitle, statistics: {viewCount} = {viewCount: 0}} = video;
+  const date = publishTime.split('T')[0];
 
   return (
     <div className={styles.container}>
@@ -66,7 +67,7 @@ const Video = ({video}) => {
         <div className={styles.modalBody}>
           <div className={styles.modalBodyContent}>
             <div className={styles.col1}>
-              <p className={styles.publishTime}>{publishTime}</p>
+              <p className={styles.publishTime}>{date}</p>
               <p className={styles.title}>{title}</p>
               <p className={styles.description}>{description}</p>
             </div>
