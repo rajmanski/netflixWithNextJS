@@ -10,7 +10,7 @@ export const SectionCard = (props) => {
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.cardWrapper}>
         {videos.map((video, id) => (
-          <Link href={`/video/${videoId}`}>
+          <Link href={`/video/${video.id}`}>
             <Card id={id} imgUrl={video?.imgUrl} size={size} />
           </Link>
         ))}
