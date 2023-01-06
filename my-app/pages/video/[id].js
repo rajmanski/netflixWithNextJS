@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import styles from '../../styles/Video.module.css'
 import clsx from "classnames";
 import { getVideoById } from "../../lib/videos";
+import { Navbar } from "../../components/navbar/Navbar";
 
 Modal.setAppElement("#__next");
 
@@ -15,7 +16,7 @@ export async function getStaticProps(context) {
   //   viewCount: 10000,
   // }
 
-  
+
   const videoArray = await getVideoById(context.params.id);
 
 
@@ -44,7 +45,7 @@ const Video = ({video}) => {
 
   return (
     <div className={styles.container}>
-      Video {router.query.id}
+      <Navbar/>
       <Modal
         isOpen={true}
         contentLabel="Watch the video"
