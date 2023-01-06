@@ -6,7 +6,7 @@ import { getVideoById } from "../../lib/videos";
 
 Modal.setAppElement("#__next");
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
   // const video = {
   //   title: 'Title',
   //   publishTime: '2023-01-01',
@@ -15,8 +15,9 @@ export async function getStaticProps() {
   //   viewCount: 10000,
   // }
 
-  const videoId = 'bLvqoHBptjg';
-  const videoArray = await getVideoById(videoId);
+  
+  const videoArray = await getVideoById(context.params.id);
+
 
 
   return {
@@ -39,7 +40,7 @@ export async function getStaticPaths() {
 
 const Video = ({video}) => {
   const router = useRouter();
-  const {title, publishTime, description, channelTitle, statistics: {viewCount}} = video;
+  const {title, publishTime, description, channelTitle, statistics: {viewCount} = {viewCount: 0}} = video;
 
   return (
     <div className={styles.container}>
