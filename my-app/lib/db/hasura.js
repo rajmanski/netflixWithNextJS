@@ -1,10 +1,10 @@
-async function fetchGraphQL(operationsDoc, operationName, variables) {
+export async function fetchGraphQL(operationsDoc, operationName, variables) {
     const result = await fetch(
       "https://more-tahr-80.hasura.app/v1/graphql",
       {
         method: "POST",
         headers: {
-            'x-hasura-admin-secret': 'zz2ZITHlsrvMzoSD0hFTZNR0W4vrTGHDNFF8PwANzBZe6TIUF8rPiRnrnox2gbFx',
+            'x-hasura-admin-secret': process.env.NEXT_PUBLIC_HASURA,
         },
         body: JSON.stringify({
           query: operationsDoc,
