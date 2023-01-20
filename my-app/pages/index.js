@@ -5,6 +5,8 @@ import { Banner } from "../components/banner/Banner";
 import { Navbar } from "../components/navbar/Navbar";
 import { SectionCard } from "../components/card/SectionCard";
 import { getVideos } from "../lib/videos";
+import { startFetchMyQuery } from '../lib/db/hasura'
+
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,7 +29,7 @@ export default function Home({
 }) {
 
   
-
+  startFetchMyQuery();
   return (
     <>
       <Head>
